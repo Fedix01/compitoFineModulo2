@@ -24,12 +24,34 @@ nav .nav-link:hover {
     color: white !important;
 }
 
+nav form div:nth-of-type(2) {
+    color: lightgray;
+}
+
+nav form div:nth-of-type(2):hover {
+    color: white;
+}
+
+nav form div {
+    cursor: pointer;
+}
+
 nav div.dropdown img {
     width: 30px;
 }
 
 nav form span {
     font-size: 13px;
+}
+
+@media screen and (max-width:580px) {
+    nav form div:nth-of-type(2) {
+        display: none;
+    }
+
+    nav form div:nth-of-type(3) {
+        display: none;
+    }
 }
 
 section .row div:first-of-type button {
@@ -41,6 +63,24 @@ section .row div:last-of-type div {
     max-height: 32px;
 }
 
+@media screen and (max-width: 767px) {
+    .container-fluid .row {
+        margin: 20px 0 !important;
+        padding: 0 !important;
+    }
+
+    .carousel-control-prev-icon.left {
+        position: absolute;
+        left: -15px !important;
+        top: 20% !important;
+    }
+
+    .carousel-control-next-icon.right {
+        position: absolute;
+        right: 15px !important;
+        top: 20% !important;
+    }
+}
 
 /* Carousel */
 
@@ -51,7 +91,14 @@ section .row div:last-of-type div {
 
     .carousel-inner .carousel-item>div:first-child {
         display: block;
+        width: 150px;
     }
+
+    .carousel-inner .carousel-item>div:nth-child(2) {
+        display: block;
+        width: 150px;
+    }
+
 }
 
 .carousel-inner .carousel-item.active,
@@ -83,6 +130,10 @@ main .carousel-item .card {
     background-color: black !important;
 }
 
+.carousel-inner {
+    overflow: visible;
+}
+
 .carousel-control-prev-icon.left {
     position: absolute;
     left: -30px;
@@ -93,4 +144,43 @@ main .carousel-item .card {
     position: absolute;
     right: -30px;
     top: 60px;
+}
+
+/* .carousel-innner {
+    overflow: visible;
+}
+
+.carousel {
+    overflow-x: hidden !important;
+} */
+
+/* Footer */
+
+footer div i {
+    font-size: 25px;
+}
+
+footer .text-light {
+    color: rgb(154, 154, 154) !important;
+}
+
+footer .border-light {
+    border: 1px solid rgb(154, 154, 154) !important;
+
+}
+
+footer p {
+    font-size: 13px;
+}
+
+.zoom-item {
+    transform: scale(1.2);
+    transition: transform 0.6s linear 0s;
+    z-index: 2;
+}
+
+footer .row h6:hover,
+button:hover {
+    color: white !important;
+    cursor: pointer;
 }
