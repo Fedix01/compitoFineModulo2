@@ -60,3 +60,17 @@ for (let item of allItems) {
     })
 
 }
+
+
+window.addEventListener("scroll", (event) => {
+    console.log(window.scrollY)
+    let thirdSec = document.querySelector("#third-sec");
+    if (window.scrollY > 100) {
+        thirdSec.classList.add("scroll-open");
+        thirdSec.offsetWidth;
+    } else if (window.scrollY < 100) {
+        thirdSec.classList.remove("scroll-open")
+        thirdSec.classList.add("scroll-close");
+        thirdSec.offsetWidth;
+    }
+})

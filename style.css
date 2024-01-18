@@ -44,6 +44,17 @@ nav form span {
     font-size: 13px;
 }
 
+/* nav form .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+nav form .dropdown-menu {
+    position: absolute;
+    overflow: visible;
+    z-index: 2;
+} */
+
 @media screen and (max-width:580px) {
     nav form div:nth-of-type(2) {
         display: none;
@@ -144,6 +155,36 @@ main .carousel-item .card {
     position: absolute;
     right: -30px;
     top: 60px;
+}
+
+.carousel-item {
+    transition: transform 1s linear !important;
+}
+
+#third-sec {
+    opacity: 0;
+}
+
+.scroll-open {
+    animation: open 3s forwards;
+}
+
+.scroll-close {
+    opacity: 0;
+}
+
+@keyframes open {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 /* .carousel-innner {
