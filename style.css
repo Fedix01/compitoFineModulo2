@@ -44,16 +44,10 @@ nav form span {
     font-size: 13px;
 }
 
-/* nav form .dropdown {
-    position: relative;
-    display: inline-block;
+nav form .dropdown-menu.show {
+    left: auto;
+    right: 10px;
 }
-
-nav form .dropdown-menu {
-    position: absolute;
-    overflow: visible;
-    z-index: 2;
-} */
 
 @media screen and (max-width:580px) {
     nav form div:nth-of-type(2) {
@@ -123,12 +117,12 @@ section .row div:last-of-type div {
 
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
-        transform: translateX(25%);
+        transform: translateX(15%);
     }
 
     .carousel-inner .carousel-item-start.active,
     .carousel-inner .carousel-item-prev {
-        transform: translateX(-25%);
+        transform: translateX(0%);
     }
 }
 
@@ -157,9 +151,6 @@ main .carousel-item .card {
     top: 60px;
 }
 
-.carousel-item {
-    transition: transform 1s linear !important;
-}
 
 #third-sec {
     opacity: 0;
@@ -187,13 +178,12 @@ main .carousel-item .card {
     }
 }
 
-/* .carousel-innner {
-    overflow: visible;
+.zoom-item {
+    transform: scale(1.2);
+    transition: transform 0.6s linear 0s;
+    z-index: 2;
+    cursor: pointer;
 }
-
-.carousel {
-    overflow-x: hidden !important;
-} */
 
 /* Footer */
 
@@ -214,11 +204,7 @@ footer p {
     font-size: 13px;
 }
 
-.zoom-item {
-    transform: scale(1.2);
-    transition: transform 0.6s linear 0s;
-    z-index: 2;
-}
+
 
 footer .row h6:hover,
 button:hover {
