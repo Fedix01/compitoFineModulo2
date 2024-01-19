@@ -49,6 +49,23 @@ nav form .dropdown-menu.show {
     right: 10px;
 }
 
+main .card .movie-info .movie-icons {
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+main .card .movie-info .film-line {
+    height: 5px;
+    width: 30%;
+    background-color: red;
+    margin: 0 0 10px 10px;
+}
+
+main .card .movie-info h4 {
+    font-size: 15px;
+    margin: 0 0 10px 10px;
+}
+
 @media screen and (max-width:580px) {
     nav form div:nth-of-type(2) {
         display: none;
@@ -179,6 +196,19 @@ main .carousel-item .card {
 }
 
 .zoom-item {
+    display: block !important;
+}
+
+main .card .movie-info {
+    position: absolute;
+    top: 0;
+    width: 280px;
+    z-index: 2;
+    height: 280px;
+    display: none;
+}
+
+main .card .movie-info:hover {
     transform: scale(1.2);
     transition: transform 0.6s linear 0s;
     z-index: 2;
@@ -210,4 +240,14 @@ footer .row h6:hover,
 button:hover {
     color: white !important;
     cursor: pointer;
+}
+
+footer .modal-header,
+.modal-body,
+.modal-footer {
+    color: white;
+}
+
+footer .modal-footer button:last-of-type:hover {
+    background-color: rgb(161, 0, 0) !important;
 }

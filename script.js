@@ -47,16 +47,16 @@ itemsThirdSection.forEach((el) => {
 })
 
 let allItems = document.querySelectorAll(".carousel .carousel-item .card");
-// console.log(allItems);
+console.log(allItems);
 for (let item of allItems) {
     item.addEventListener("mouseenter", (event) => {
-        event.target.classList.add("zoom-item")
+        event.target.getElementsByTagName("div")[1].classList.add("zoom-item");
     })
 
 }
 for (let item of allItems) {
     item.addEventListener("mouseleave", (event) => {
-        event.target.classList.remove("zoom-item")
+        event.target.getElementsByTagName("div")[1].classList.remove("zoom-item");
     })
 
 }
