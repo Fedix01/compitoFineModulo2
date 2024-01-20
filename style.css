@@ -120,7 +120,20 @@ section .row div:last-of-type div {
         display: block;
         width: 150px;
     }
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+        transform: translateX(50%);
+        
+    }
 
+    .carousel-inner .carousel-item-start.active,
+    .carousel-inner .carousel-item-prev {
+        transform: translateX(0%);
+   
+    }
+  #third-sec {
+    opacity: 1 !important;
+  }
 }
 
 .carousel-inner .carousel-item.active,
