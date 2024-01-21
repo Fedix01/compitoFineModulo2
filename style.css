@@ -24,6 +24,10 @@ nav .nav-link:hover {
     color: white !important;
 }
 
+nav ul li:nth-of-type(2) a {
+    color: white !important;
+    font-weight: 600;
+}
 nav form div:nth-of-type(2) {
     color: lightgray;
 }
@@ -43,10 +47,8 @@ nav div.dropdown img {
 nav form span {
     font-size: 13px;
 }
-
-nav form .dropdown-menu.show {
-    left: auto;
-    right: 10px;
+nav .dropdown-menu {
+    padding: 10px 10px 10px 10px;
 }
 
 main .card .movie-info .movie-icons {
@@ -132,8 +134,19 @@ section .row div:last-of-type div {
    
     }
   #third-sec {
-    opacity: 1 !important;
+    opacity: 0;
   }
+
+  .third-sec {
+    animation: open 3s forwards;
+  }
+  .scroll-open {
+    animation: open 3s forwards !important;
+}
+
+.scroll-close {
+    opacity: 0 !important;
+}
 }
 
 .carousel-inner .carousel-item.active,
