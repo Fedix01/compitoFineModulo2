@@ -28,12 +28,25 @@ nav ul li:nth-of-type(2) a {
     color: white !important;
     font-weight: 600;
 }
+
 nav form div:nth-of-type(2) {
     color: lightgray;
 }
 
 nav form div:nth-of-type(2):hover {
     color: white;
+}
+
+.activeNav {
+    color: white !important;
+}
+
+nav .dropdown-menu img {
+    border-radius: 50%;
+}
+
+nav .drop-items:hover {
+    background-color: #52575C;
 }
 
 nav form div {
@@ -47,6 +60,7 @@ nav div.dropdown img {
 nav form span {
     font-size: 13px;
 }
+
 nav .dropdown-menu {
     padding: 10px 10px 10px 10px;
 }
@@ -104,6 +118,10 @@ section .row div:last-of-type div {
         right: 15px !important;
         top: 20% !important;
     }
+
+    nav .dropdown-menu {
+        display: none !important;
+    }
 }
 
 /* Carousel */
@@ -122,31 +140,34 @@ section .row div:last-of-type div {
         display: block;
         width: 150px;
     }
+
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
         transform: translateX(50%);
-        
+
     }
 
     .carousel-inner .carousel-item-start.active,
     .carousel-inner .carousel-item-prev {
         transform: translateX(0%);
-   
+
     }
-  #third-sec {
-    opacity: 0;
-  }
 
-  .third-sec {
-    animation: open 3s forwards;
-  }
-  .scroll-open {
-    animation: open 3s forwards !important;
-}
+    #third-sec {
+        opacity: 0;
+    }
 
-.scroll-close {
-    opacity: 0 !important;
-}
+    .third-sec {
+        animation: open 3s forwards;
+    }
+
+    .scroll-open {
+        animation: open 3s forwards !important;
+    }
+
+    .scroll-close {
+        opacity: 0 !important;
+    }
 }
 
 .carousel-inner .carousel-item.active,
@@ -195,16 +216,17 @@ main .carousel-item .card {
 }
 
 
-#third-sec {
+.third-sec {
     opacity: 0;
 }
 
 .scroll-open {
-    animation: open 3s forwards;
+    opacity: 1 !important;
 }
 
 .scroll-close {
     opacity: 0;
+    transition: opacity 3s ease;
 }
 
 @keyframes open {
